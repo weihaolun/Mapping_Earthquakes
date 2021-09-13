@@ -21,39 +21,39 @@ The earthquakes map should be informative and easy to use on desktop and mobile 
 
 ## The Challenge ([Click Here](https://github.com/weihaolun/Mapping_Earthquakes/tree/main/Earthquake_Challenge))
 
-### The purposes of the Challenge section are:
+**The purposes of the Challenge section are:**
 1.	To see the earthquake data in relation to the tectonic plates’ location on the earth.
 2.	To see all the earthquakes with a magnitude greater than 4.5 on the map.
 3.	To see the data on a third map.
 
 
-### Deliverables:
+**Deliverables:**
 1.	Add Tectonic Plate Data
 2.	Add Major Earthquake Data
 3.	Add an Additional Map
 
 ## Map Walk-through
 
-### Initial load (Streets Map with All Data displayed):
+**Initial load (Streets Map with All Data displayed):**
 
 ![initial](https://user-images.githubusercontent.com/84211948/133013926-c0b74b61-9f94-4012-bbdd-8d7a47f8cf34.png)
 
-### All Earthquakes:
+**All Earthquakes:**
 
 ![allearthquakes](https://user-images.githubusercontent.com/84211948/133014032-4e19e612-38ae-4e23-949f-6d740de2b892.png)
 
-### Tectonic Plate (with All Earthquakes):
+**Tectonic Plate (with All Earthquakes):**
 
 ![tectonicplates](https://user-images.githubusercontent.com/84211948/133014055-b7792e3f-0f25-48ef-ba7b-7255bf58ebba.png)
 
-### Major Earthquakes (with Tectonic Plate):
+**Major Earthquakes (with Tectonic Plate):**
 
 ![majorearthquakes](https://user-images.githubusercontent.com/84211948/133014076-396f419e-e6cd-4563-96a3-32bfff475753.png)
 
-### Satellite Map (with All Data):
+**Satellite Map (with All Data):**
 
 ![satellite](https://user-images.githubusercontent.com/84211948/133014101-b0c8dde1-5bed-4c26-93c8-b8cf43e2a897.png)
 
-### Dark Map (with All Data):
+**Dark Map (with All Data):**
 
 ![dark](https://user-images.githubusercontent.com/84211948/133014123-ee7e0eca-572a-41f4-a1b1-b79e1e568ef3.png)
