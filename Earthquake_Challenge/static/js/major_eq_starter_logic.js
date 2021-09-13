@@ -28,15 +28,14 @@ let baseMaps = {
   "Satellite": satelliteStreets
 };
 
-// 1. Add a 2nd layer group for the tectonic plate data.
+// 1. Add a 3rd layer group for the major earthquake data.
 let allEarthquakes = new L.LayerGroup();
-let tectonicPlates = new L.LayerGroup();
 let majorEarthquakes = new L.LayerGroup();
 
-// 2. Add a reference to the tectonic plates group to the overlays object.
+
+// 2. Add a reference to the major earthquake group to the overlays object.
 let overlays = {
   "Earthquakes": allEarthquakes,
-  "Tectonic Plates": tectonicPlates,
   "Major Earthquakes": majorEarthquakes
 };
 
@@ -84,7 +83,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     }
     return "#98ee00";
   }
-
   // This function determines the radius of the earthquake marker based on its magnitude.
   // Earthquakes with a magnitude of 0 were being plotted with the wrong radius.
   function getRadius(magnitude) {
@@ -142,7 +140,6 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
     }
     return "#ea822c";
   }
-
 // 6. Use the function that determines the radius of the earthquake marker based on its magnitude.
   function getRadius(magnitude) {
     if (magnitude === 0) {
@@ -170,24 +167,24 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geoj
   // 9. Close the braces and parentheses for the major earthquake data.
   });
 
-  // Here we create a legend control object.
+// Here we create a legend control object.
 let legend = L.control({
   position: "bottomright"
+
 });
 
 // Then add all the details for the legend
 legend.onAdd = function() {
   let div = L.DomUtil.create("div", "info legend");
 
-  const magnitudes = [0, 1, 2, 3, 4, 5, 6];
+  const magnitudes = [0, 1, 2, 3, 4, 5];
   const colors = [
     "#98ee00",
     "#d4ee00",
     "#eecc00",
     "#ee9c00",
     "#ea822c",
-    "#ea2c2c",
-    "#8f2722"
+    "#ea2c2c"
   ];
 
 // Looping through our intervals to generate a label with a colored square for each interval.
@@ -200,17 +197,9 @@ legend.onAdd = function() {
     return div;
   };
 
-  // Finally, we add our legend to the map.
+  // Finally, we our legend to the map.
   legend.addTo(map);
 
 
-  // 3. Use d3.json to make a call to get our Tectonic Plate geoJSON data.
-  d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then(function(plateData) {
-    L.geoJson(plateData, {
-      color: "#ff6500",
-      weigh: 2
-    }).addTo(tectonicPlates)
 
-    tectonicPlates.addTo(map)
-  });
 });
